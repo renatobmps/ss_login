@@ -26,16 +26,6 @@ app.get("/logout", (req, res) => {
   return res.json(req.session.user || {});
 });
 
-// https://minhaapi.com/login?email=meu@email.com&pass=123456
-
-app.post("/login", (req, res) => {
-  const { email, pass } = req.query;
-
-  // ...
-
-  return res.json(req.session.user || {});
-});
-
 app.listen(3000, () =>
   console.log({
     in: "http://localhost:3000/in?chave=valor&name=username",
